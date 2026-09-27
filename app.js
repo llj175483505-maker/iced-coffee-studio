@@ -4,52 +4,58 @@
   if (!content) return;
   const dialog = document.querySelector('#project-dialog');
   let lastTrigger;
-  const safeUrl = value => {
-    try { const url = new URL(value); return ['http:', 'https:'].includes(url.protocol) ? url.href : ''; } catch { return ''; }
+  const element = (tag, className, text) => {
+    const node = document.createElement(tag);
+    if (className) node.className = className;
+    if (text) node.textContent = text;
+    return node;
+  };
+  const renderProject = project => {
+    document.querySelector('#dialog-kind').textContent = project.category;
+    document.querySelector('#dialog-title').textContent = project.title;
+    document.querySelector('#dialog-description').textContent = project.description;
+    document.querySelector('#dialog-tags').replaceChildren(...project.stack.map(text => element('span', '', text)));
+    document.querySelector('#dialog-features').replaceChildren(...project.features.map(([title, text]) => {
+      const item = element('li');
+      item.append(element('h4', '', title), element('p', '', text));
+      return item;
+    }));
+    document.querySelector('#dialog-workflow').replaceChildren(...project.workflow.map(text => element('li', '', text)));
+    document.querySelector('#dialog-usecase').textContent = project.usecase;
+    document.querySelector('#dialog-gallery').replaceChildren(...project.images.map(({src, caption, width, height}) => {
+      const figure = element('figure');
+      const link = element('a', 'screenshot-link');
+      link.href = src;
+      link.target = '_blank';
+      link.rel = 'noopener';
+      link.setAttribute('aria-label', caption + '，在新标签页查看原图');
+      const image = element('img');
+      image.src = src;
+      image.alt = caption;
+      image.width = width;
+      image.height = height;
+      image.loading = 'lazy';
+      link.append(image);
+      figure.append(link, element('figcaption', '', caption));
+      return figure;
+    }));
   };
   document.querySelector('#year').textContent = String(new Date().getFullYear());
-  document.querySelector('#about-description').textContent = content.about;
-  if (typeof content.email === 'string' && /^[^\s@?&#]+@[^\s@?&#]+\.[^\s@?&#]+$/.test(content.email)) {
-    const link = document.querySelector('#contact-link');
-    link.href = 'mailto:' + content.email;
-    link.textContent = '联系工作室 · ' + content.email;
-    link.hidden = false;
-  }
   for (const project of content.projects) {
-    const card = Array.from(document.querySelectorAll('[data-project]')).find(el => el.dataset.project === project.id);
-    if (!card) continue;
-    card.querySelector('h3').textContent = project.title;
-    card.querySelector('.project-category').textContent = project.category;
-    card.querySelector('.project-info p').textContent = project.summary;
-    card.querySelector('.sample-badge').hidden = !project.sample;
-    const button = card.querySelector('[data-open]');
-    button.setAttribute('aria-label', '查看' + project.title + (project.sample ? '展示示例' : '项目详情'));
-    if (project.cover && /^(?:assets\/)?[a-zA-Z0-9_-]+\.(?:png|jpe?g|webp|avif|svg)$/.test(project.cover)) {
-      const visual = card.querySelector('.project-visual');
-      visual.style.backgroundImage = 'url("' + project.cover + '")';
-      visual.style.backgroundSize = 'cover';
-      visual.style.backgroundPosition = 'center';
-      visual.classList.add('has-art');
-      if (!project.sample) Array.from(visual.children).filter(el => !el.classList.contains('sample-badge')).forEach(el => el.hidden = true);
-    }
+    const button = document.querySelector('[data-open="' + project.id + '"]');
+    if (!button) continue;
     button.addEventListener('click', () => {
       lastTrigger = button;
-      document.querySelector('#dialog-label').textContent = project.sample ? 'CONCEPT PREVIEW / 展示示例' : 'PROJECT / 项目详情';
-      document.querySelector('#dialog-title').textContent = project.title;
-      document.querySelector('#dialog-kind').textContent = project.category;
-      document.querySelector('#dialog-description').textContent = project.description;
-      const note = document.querySelector('#dialog-note');
-      note.textContent = '此处为作品集展示示例，不代表冰咖啡工作室已发布该项目。';
-      note.hidden = !project.sample;
-      const url = safeUrl(project.url);
-      const link = document.querySelector('#dialog-link');
-      link.hidden = !url;
-      if (url) link.href = url; else link.removeAttribute('href');
+      renderProject(project);
       dialog.showModal();
+      dialog.scrollTop = 0;
     });
   }
-  if (!content.projects.some(project => project.sample)) document.querySelector('#work-note').hidden = true;
   dialog.querySelector('.dialog-close').addEventListener('click', () => dialog.close());
-  dialog.addEventListener('click', event => { if (event.target === dialog) { const box = dialog.getBoundingClientRect(); if (event.clientX < box.left || event.clientX > box.right || event.clientY < box.top || event.clientY > box.bottom) dialog.close(); } });
-  dialog.addEventListener('close', () => { if (lastTrigger) lastTrigger.focus(); });
+  dialog.addEventListener('click', event => {
+    if (event.target !== dialog) return;
+    const box = dialog.getBoundingClientRect();
+    if (event.clientX < box.left || event.clientX > box.right || event.clientY < box.top || event.clientY > box.bottom) dialog.close();
+  });
+  dialog.addEventListener('close', () => { if (lastTrigger) lastTrigger.focus({preventScroll: true}); });
 })();
