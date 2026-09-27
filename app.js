@@ -19,7 +19,7 @@
     document.querySelector('#usecase-title').textContent = project.usecaseHeading || '适用场景';
     document.querySelector('#gallery-title').textContent = project.galleryHeading || '软件界面';
     document.querySelector('#gallery-note').textContent = project.galleryNote || '截图来自项目操作说明，点击可查看原图。';
-    document.querySelector('#dialog-gallery').classList.toggle('gallery--portrait', project.kind === 'game');
+    document.querySelector('#dialog-gallery').classList.toggle('gallery--portrait', project.kind === 'game' && project.orientation !== 'landscape');
     document.querySelector('#dialog-tags').replaceChildren(...project.stack.map(text => element('span', '', text)));
     document.querySelector('#dialog-features').replaceChildren(...project.features.map(([title, text]) => {
       const item = element('li');

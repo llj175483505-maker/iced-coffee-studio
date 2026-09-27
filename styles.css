@@ -51,6 +51,7 @@ dialog{width:min(1020px,calc(100% - 36px));max-height:calc(100dvh - 40px);scroll
 .gallery figcaption{font-size:13px;color:#bac9d5;padding:12px 18px}
 .game-project .project-visual{grid-template-columns:repeat(3,minmax(0,1fr));gap:13px;align-items:center;background:radial-gradient(ellipse at 35% 40%,#153d3d,#10202c 55%,#10171f)}
 .game-project .project-visual img{width:100%;height:auto;border:1px solid #395960;border-radius:8px}
+.game-project.game-landscape .project-visual{grid-template-columns:minmax(0,1fr)}
 .game-project .project-tags>span{border-color:#37675f;color:#a1efdb}
 .game-project .project-category,.game-project .project-action{color:#75e4c7}
 .gallery--portrait{grid-template-columns:repeat(3,minmax(0,1fr));gap:14px}
