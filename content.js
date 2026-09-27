@@ -537,40 +537,40 @@ window.PORTFOLIO = {
       ],
       "usecase": "医学影像交互可视化、标注与分割功能开发，以及配准流程演示。",
       "galleryHeading": "项目录屏截图",
-      "galleryNote": "从 4 段开发录屏中选取 6 张原始画面，按功能整理；点击可查看大图。",
+      "galleryNote": "截图来自 4 段项目开发录屏，按功能整理；点击可查看大图。",
       "images": [
         {
-          "src": "medical-cover.png",
+          "src": "medical-cover.png?v=f090523ea285",
           "caption": "三维重建与定位：胸部体渲染、三向切片和控制点同步显示",
           "width": 1280,
           "height": 816
         },
         {
-          "src": "medical-detail-1.png",
+          "src": "medical-detail-1.png?v=f672f643fc81",
           "caption": "切片与三维对照：在体数据中查看灰度切面",
           "width": 1280,
           "height": 816
         },
         {
-          "src": "medical-detail-2.png",
+          "src": "medical-detail-2.png?v=2e28f60e6d42",
           "caption": "控制点与 ROI：观察内部结构，标记位置并设置范围框",
           "width": 1280,
           "height": 816
         },
         {
-          "src": "medical-detail-3.png",
+          "src": "medical-detail-3.png?v=1e9902725e10",
           "caption": "切片放大与范围编辑：冠状位大图、范围框和三维操作手柄",
           "width": 1280,
           "height": 816
         },
         {
-          "src": "medical-detail-4.png",
+          "src": "medical-detail-4.png?v=71189b68c46e",
           "caption": "二维精细分割：轴位切片中的紫色 Mask 覆盖与画笔编辑",
           "width": 960,
           "height": 608
         },
         {
-          "src": "medical-detail-5.png",
+          "src": "medical-detail-5.png?v=0852fff9094e",
           "caption": "三维分割预览：紫色分割区域、三向切片与体积统计",
           "width": 960,
           "height": 608
