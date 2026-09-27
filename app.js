@@ -14,6 +14,12 @@
     document.querySelector('#dialog-kind').textContent = project.category;
     document.querySelector('#dialog-title').textContent = project.title;
     document.querySelector('#dialog-description').textContent = project.description;
+    document.querySelector('#features-title').textContent = project.featureHeading || '核心功能';
+    document.querySelector('#workflow-title').textContent = project.workflowHeading || '操作流程';
+    document.querySelector('#usecase-title').textContent = project.usecaseHeading || '适用场景';
+    document.querySelector('#gallery-title').textContent = project.galleryHeading || '软件界面';
+    document.querySelector('#gallery-note').textContent = project.galleryNote || '截图来自项目操作说明，点击可查看原图。';
+    document.querySelector('#dialog-gallery').classList.toggle('gallery--portrait', project.kind === 'game');
     document.querySelector('#dialog-tags').replaceChildren(...project.stack.map(text => element('span', '', text)));
     document.querySelector('#dialog-features').replaceChildren(...project.features.map(([title, text]) => {
       const item = element('li');

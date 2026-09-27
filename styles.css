@@ -49,5 +49,13 @@ dialog{width:min(1020px,calc(100% - 36px));max-height:calc(100dvh - 40px);scroll
 .screenshot-link{display:grid;place-items:center;padding:18px;background:#121d28}
 .gallery img{display:block;max-width:100%;height:auto;max-height:550px;object-fit:contain}
 .gallery figcaption{font-size:13px;color:#bac9d5;padding:12px 18px}
+.game-project .project-visual{grid-template-columns:repeat(3,minmax(0,1fr));gap:13px;align-items:center;background:radial-gradient(ellipse at 35% 40%,#153d3d,#10202c 55%,#10171f)}
+.game-project .project-visual img{width:100%;height:auto;border:1px solid #395960;border-radius:8px}
+.game-project .project-tags>span{border-color:#37675f;color:#a1efdb}
+.game-project .project-category,.game-project .project-action{color:#75e4c7}
+.gallery--portrait{grid-template-columns:repeat(3,minmax(0,1fr));gap:14px}
+.gallery--portrait .screenshot-link{padding:10px}
+.gallery--portrait figcaption{font-size:12px;padding:12px}
+@media(max-width:700px){.game-project .project-visual{display:grid;aspect-ratio:auto;gap:8px}.game-project .project-visual img{border-radius:5px}.gallery--portrait{grid-template-columns:1fr}.gallery--portrait img{max-height:580px}.gallery--portrait .screenshot-link{padding:16px}}
 @media(max-width:1000px){.featured .project-open{grid-template-columns:1.25fr 1fr}.featured .project-info{padding:24px}.featured .project-info h3{font-size:24px}.project-visual{padding:20px 20px 36px}.project-info{padding:22px}.project-info h3{font-size:22px}.visual-caption{left:20px;bottom:9px}.project-tags{gap:6px}.project-tags>span{font-size:11px;padding-inline:7px}}
 @media(max-width:700px){.project-grid{gap:28px}.featured .project-open{display:block}.featured .project-visual{border-right:0;border-bottom:1px solid var(--line);padding:20px 20px 38px}.project-visual{aspect-ratio:16/10}.featured .project-info{padding:22px}.featured .project-info h3{font-size:24px}.project-info p{min-height:0}.featured .project-action{margin-top:22px}.dialog-top{padding:12px 18px}.dialog-body{padding:24px 20px}.dialog-body h2{font-size:28px}.dialog-kind{font-size:11px;letter-spacing:.05em}.feature-grid{grid-template-columns:1fr;gap:20px}.workflow{grid-template-columns:1fr 1fr;gap:10px}.detail-section{margin-top:28px;padding-top:24px}.dialog-body .usecase{display:block}.usecase>span:first-child{display:block;margin-bottom:6px}.screenshot-link{padding:9px}.gallery figcaption{font-size:12px;padding:10px 12px}.gallery{gap:18px}}
