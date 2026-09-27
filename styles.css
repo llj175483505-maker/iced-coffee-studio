@@ -101,3 +101,12 @@ dialog{width:min(1020px,calc(100% - 36px));max-height:calc(100dvh - 40px);scroll
 @media(max-width:1000px){.creator-profile{padding:30px}.creator-work{padding:30px 24px}.creator-videos li{gap:12px;grid-template-columns:22px minmax(0,1fr) auto}.creator-videos h5{font-size:14px}.creator-plays strong{font-size:14px}}
 @media(max-width:700px){.creator-section{padding-top:70px}.creator-card{grid-template-columns:1fr}.creator-profile{border-right:0;border-bottom:1px solid #3f3c30;padding:26px 24px}.creator-profile h3{font-size:28px;margin-top:22px}.creator-stats dd{font-size:36px}.creator-work{padding:27px 24px}.creator-videos li{gap:9px;padding:22px 0}.creator-videos h5{font-size:14px}.creator-plays strong{font-size:13px}.creator-topics{margin-top:24px}}
 @media(max-width:380px){.creator-videos li{grid-template-columns:20px minmax(0,1fr)}.creator-plays{grid-column:2;text-align:left}.creator-plays strong{display:inline;margin-right:8px}.creator-stats{gap:14px}.creator-stats dd{font-size:32px}}
+
+/* Bookstore mini program */
+.commerce-project .project-visual{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px;align-items:center;background:radial-gradient(ellipse at 35% 30%,#244c5e,#142c3b 58%,#10171f)}
+.commerce-project .project-visual img{width:100%;height:auto;border:1px solid #597e96;border-radius:10px}
+.commerce-project .project-category,.commerce-project .project-action{color:#a3d6f4}
+.commerce-project .project-tags>span{border-color:#3f6075;color:#b6d9ef}
+.site-header nav{gap:26px}
+@media(max-width:1000px){.site-header nav{gap:18px}}
+@media(max-width:700px){.commerce-project .project-visual{display:grid;gap:8px;aspect-ratio:auto}.site-header nav{gap:8px}.site-header nav a{padding-inline:1px;font-size:13px}.commerce-project .project-visual img{border-radius:6px}}
