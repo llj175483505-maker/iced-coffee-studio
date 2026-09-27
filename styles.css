@@ -103,6 +103,8 @@ dialog{width:min(1020px,calc(100% - 36px));max-height:calc(100dvh - 40px);scroll
 @media(max-width:380px){.creator-videos li{grid-template-columns:20px minmax(0,1fr)}.creator-plays{grid-column:2;text-align:left}.creator-plays strong{display:inline;margin-right:8px}.creator-stats{gap:14px}.creator-stats dd{font-size:32px}}
 
 /* Bookstore mini program */
+/* Show the MR video viewport; the linked original preserves the full source frame. */
+.project[data-project="mr-spatial"] .project-visual img,.gallery img[src^="mr-spatial-"]{aspect-ratio:592/360;height:auto;object-fit:cover;object-position:50% 42.3%}
 .commerce-project .project-visual{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px;align-items:center;background:radial-gradient(ellipse at 35% 30%,#244c5e,#142c3b 58%,#10171f)}
 .commerce-project .project-visual img{width:100%;height:auto;border:1px solid #597e96;border-radius:10px}
 .commerce-project .project-category,.commerce-project .project-action{color:#a3d6f4}

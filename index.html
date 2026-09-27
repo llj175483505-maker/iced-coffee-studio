@@ -4,11 +4,11 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="theme-color" content="#080c10">
-  <meta name="description" content="冰咖啡工作室的游戏、软件与动画作品集。展示 7 个展厅项目（含 Kinect 双人体感、触控屏砸球）、医学影像三维可视化系统、书店商城微信小程序、手速弹球、手速插针、手速汽车等 3 款小游戏，以及粤语动画自媒体账号广东爆笑声。">
+  <meta name="description" content="冰咖啡工作室的游戏、软件与动画作品集。展示 7 个展厅项目（含 Kinect 双人体感、触控屏砸球）、医学影像三维可视化与 MR 空间定位、书店商城微信小程序、手速弹球、手速插针、手速汽车等 3 款小游戏，以及粤语动画自媒体账号广东爆笑声。">
   <title>冰咖啡工作室 · 游戏、软件与动画作品集</title>
   <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='16' fill='%23080c10'/%3E%3Cpath d='M18 19h25l-3 31H21Z' fill='none' stroke='%238ddcff' stroke-width='4'/%3E%3Cpath d='m34 25 5-15h7M18 29h24' fill='none' stroke='%238ddcff' stroke-width='4'/%3E%3C/svg%3E">
-  <link rel="stylesheet" href="styles.css?v=ed2ffbcc1e94">
-  <script src="content.js?v=65a1400dc4e0" defer></script>
+  <link rel="stylesheet" href="styles.css?v=1c960ce6e007">
+  <script src="content.js?v=b22d548c7734" defer></script>
   <script src="app.js?v=0866d4ee49cf" defer></script>
 </head>
 <body>
@@ -75,12 +75,18 @@
       </div>
     </section>
     <section class="works-section shell" id="medical" aria-labelledby="medical-title">
-      <div class="section-heading"><div><div class="eyebrow">02 / MEDICAL SOFTWARE</div><h2 id="medical-title">医疗软件<span class="title-dot">.</span></h2></div><p>从二维影像到三维交互</p></div>
+      <div class="section-heading"><div><div class="eyebrow">02 / MEDICAL SOFTWARE</div><h2 id="medical-title">医疗软件<span class="title-dot">.</span></h2></div><p>影像可视化与 MR 空间交互</p></div>
       <div class="project-grid" id="medical-grid">
 <article class="project featured" data-project="medical">
       <button class="project-open" type="button" data-open="medical" aria-label="查看医学影像三维可视化系统项目详情">
         <div class="project-visual"><img src="medical-cover.png?v=f090523ea285" alt="三维重建与定位：胸部体渲染、三向切片和控制点同步显示" width="1280" height="816" loading="lazy"><span class="visual-caption">01 / 三维重建</span></div>
         <div class="project-info"><div class="project-category">MEDICAL IMAGING / 医学影像</div><h3>医学影像三维可视化系统</h3><p>将 CT 影像转为可交互的三维视图，联动切片、病灶定位与精细分割。</p><div class="project-tags"><span>三维重建</span><span>切片联动</span><span>病灶分割</span></div><span class="project-action">查看项目 <span aria-hidden="true">↗</span></span></div>
+      </button>
+    </article>
+<article class="project featured" data-project="mr-spatial">
+      <button class="project-open" type="button" data-open="mr-spatial" aria-label="查看MR 空间定位与可视化系统项目详情">
+        <div class="project-visual"><img src="mr-spatial-cover.png?v=24c95ed98927" alt="MR 虚实叠加：医学影像与真实场景中的空间对应" width="592" height="1280" loading="lazy"><span class="visual-caption">02 / MR 虚实叠加</span></div>
+        <div class="project-info"><div class="project-category">MEDICAL MR / 空间定位</div><h3>MR 空间定位与可视化系统</h3><p>结合红外小球、二维码定位与空间算法，让三维医学模型与真实场景形成空间对应。</p><div class="project-tags"><span>MR 虚实叠加</span><span>红外小球</span><span>二维码定位</span></div><span class="project-action">查看项目 <span aria-hidden="true">↗</span></span></div>
       </button>
     </article>
       </div>
@@ -144,7 +150,7 @@
       </div>
     </section>
 
-    <section class="about-section shell" id="about" aria-labelledby="about-title"><div class="eyebrow">06 / BEHIND THE WORK</div><div class="about-layout"><h2 id="about-title">关于<br>冰咖啡工作室<span class="title-dot">.</span></h2><div class="about-copy"><p class="about-lead">让想法在屏幕之外发生。</p><p id="about-description">这里记录我的交互软件、商城应用、小游戏与动画创作：从展厅内容展示、设备控制、体感与触屏互动、医学影像三维可视化，到书店商城的选购与订单管理、《手速弹球》《手速插针》《手速汽车》的指尖挑战，再到“广东爆笑声”的粤语动画，把想法做成可以看见、可以参与的作品。</p><div class="about-tags"><span>Unity / C#</span><span>小游戏开发</span><span>交互软件</span></div><a id="contact-link" class="text-link" hidden></a></div></div></section>
+    <section class="about-section shell" id="about" aria-labelledby="about-title"><div class="eyebrow">06 / BEHIND THE WORK</div><div class="about-layout"><h2 id="about-title">关于<br>冰咖啡工作室<span class="title-dot">.</span></h2><div class="about-copy"><p class="about-lead">让想法在屏幕之外发生。</p><p id="about-description">这里记录我的交互软件、商城应用、小游戏与动画创作：从展厅内容展示、设备控制、体感与触屏互动、医学影像三维可视化与 MR 空间定位，到书店商城的选购与订单管理、《手速弹球》《手速插针》《手速汽车》的指尖挑战，再到“广东爆笑声”的粤语动画，把想法做成可以看见、可以参与的作品。</p><div class="about-tags"><span>Unity / C#</span><span>小游戏开发</span><span>交互软件</span></div><a id="contact-link" class="text-link" hidden></a></div></div></section>
   </main>
   <footer class="site-footer shell"><a class="footer-name" href="#top">冰咖啡工作室 <span>ICED COFFEE STUDIO</span></a><span>© <span id="year">2026</span></span><a href="#top" class="back-top">回到顶部 <span aria-hidden="true">↑</span></a></footer>
   <dialog id="project-dialog" aria-labelledby="dialog-title">

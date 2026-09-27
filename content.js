@@ -578,6 +578,81 @@ window.PORTFOLIO = {
       ]
     },
     {
+      "id": "mr-spatial",
+      "kind": "medical",
+      "orientation": "landscape",
+      "title": "MR 空间定位与可视化系统",
+      "category": "MEDICAL MR / 空间定位",
+      "summary": "结合红外小球、二维码定位与空间算法，让三维医学模型与真实场景形成空间对应。",
+      "description": "围绕医疗场景中的 MR 虚实叠加开展开发，将红外小球定位、二维码定位与空间算法结合，处理实体目标、定位标记与虚拟模型之间的空间关系，让定位结果与三维可视化衔接。",
+      "stack": [
+        "MR",
+        "红外小球定位",
+        "二维码定位",
+        "空间算法"
+      ],
+      "tags": [
+        "MR 虚实叠加",
+        "红外小球",
+        "二维码定位"
+      ],
+      "featureHeading": "项目技术内容",
+      "features": [
+        [
+          "MR 虚实叠加",
+          "将三维医学模型与真实场景结合，呈现模型在空间中的对应位置与观察效果。"
+        ],
+        [
+          "红外小球定位",
+          "围绕红外小球标记进行目标定位，为虚拟模型与实体目标的空间对应提供位置依据。"
+        ],
+        [
+          "二维码定位",
+          "以二维码作为空间定位标记，建立虚拟内容与场景位置之间的关联。"
+        ],
+        [
+          "空间算法",
+          "处理定位标记、实体目标与虚拟模型的空间关系，衔接定位结果、模型位姿与 MR 显示。"
+        ]
+      ],
+      "workflowHeading": "技术流程",
+      "workflow": [
+        "获取定位标记信息",
+        "建立场景空间对应",
+        "处理模型位姿关系",
+        "呈现 MR 叠加效果"
+      ],
+      "usecase": "医疗场景中的 MR 交互、空间定位与医学模型可视化研发。",
+      "galleryHeading": "MR 项目演示截图",
+      "galleryNote": "截图来自项目演示视频。页面聚焦演示区域，点击可查看保留原视频来源标识的完整画面。",
+      "images": [
+        {
+          "src": "mr-spatial-cover.png?v=24c95ed98927",
+          "caption": "MR 虚实叠加：医学影像与真实场景中的空间对应",
+          "width": 592,
+          "height": 1280
+        },
+        {
+          "src": "mr-spatial-detail-1.png?v=b34d9953701f",
+          "caption": "球状标记与空间观察：器械标记、影像切面与空间边框",
+          "width": 592,
+          "height": 1280
+        },
+        {
+          "src": "mr-spatial-detail-2.png?v=c9b3147dcd81",
+          "caption": "三维模型与切片视图：空间影像及侧边多视图界面",
+          "width": 592,
+          "height": 1280
+        },
+        {
+          "src": "mr-spatial-detail-3.png?v=73ec2b57bf0f",
+          "caption": "剖切观察：不同影像层面在真实场景中的呈现",
+          "width": 592,
+          "height": 1280
+        }
+      ]
+    },
+    {
       "id": "bookstore",
       "kind": "commerce",
       "orientation": "portrait",
