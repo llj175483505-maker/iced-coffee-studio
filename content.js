@@ -624,28 +624,28 @@ window.PORTFOLIO = {
       ],
       "usecase": "医疗场景中的 MR 交互、空间定位与医学模型可视化研发。",
       "galleryHeading": "MR 项目演示截图",
-      "galleryNote": "截图来自项目演示视频。页面聚焦演示区域，点击可查看保留原视频来源标识的完整画面。",
+      "galleryNote": "截图来自项目演示视频，按功能整理；点击可查看大图。",
       "images": [
         {
-          "src": "mr-spatial-cover.png?v=24c95ed98927",
+          "src": "mr-spatial-cover.png?v=3766f75165ef",
           "caption": "MR 虚实叠加：医学影像与真实场景中的空间对应",
           "width": 592,
           "height": 1280
         },
         {
-          "src": "mr-spatial-detail-1.png?v=b34d9953701f",
+          "src": "mr-spatial-detail-1.png?v=1f76f9ba94bb",
           "caption": "球状标记与空间观察：器械标记、影像切面与空间边框",
           "width": 592,
           "height": 1280
         },
         {
-          "src": "mr-spatial-detail-2.png?v=c9b3147dcd81",
+          "src": "mr-spatial-detail-2.png?v=d2c19fa51c15",
           "caption": "三维模型与切片视图：空间影像及侧边多视图界面",
           "width": 592,
           "height": 1280
         },
         {
-          "src": "mr-spatial-detail-3.png?v=73ec2b57bf0f",
+          "src": "mr-spatial-detail-3.png?v=10048b4db5e4",
           "caption": "剖切观察：不同影像层面在真实场景中的呈现",
           "width": 592,
           "height": 1280
