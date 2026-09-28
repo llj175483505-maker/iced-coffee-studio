@@ -710,22 +710,22 @@ window.PORTFOLIO = {
       "usecaseHeading": "适用场景",
       "usecase": "教辅图书、书店及教育类商品的微信小程序销售与日常运营。",
       "galleryHeading": "小程序页面",
-      "galleryNote": "截图来自微信开发者工具的实际页面预览，已移除品牌文字；点击可放大查看。",
+      "galleryNote": "截图来自微信开发者工具的实际页面预览，已移除品牌文字，书名与系列名称已作马赛克处理；点击可放大查看。",
       "images": [
         {
-          "src": "bookstore-cover.png?v=a4d9f8366e39",
+          "src": "bookstore-cover.png?v=916d44b4e7f7",
           "caption": "商城首页：学科入口、关键词搜索与系列图书推荐",
           "width": 289,
           "height": 625
         },
         {
-          "src": "bookstore-detail-1.png?v=414ce8e0b100",
+          "src": "bookstore-detail-1.png?v=0de4d29fd12e",
           "caption": "分类检索：按学科与图书系列浏览商品",
           "width": 289,
           "height": 625
         },
         {
-          "src": "bookstore-detail-2.png?v=bd4f8aeb9e31",
+          "src": "bookstore-detail-2.png?v=fd243e1b1783",
           "caption": "商品详情：图书介绍、价格、收藏与购买入口",
           "width": 289,
           "height": 625
